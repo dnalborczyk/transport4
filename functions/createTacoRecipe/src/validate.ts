@@ -38,6 +38,8 @@ export function validateRequest(
       statusCode: requestErrors.status,
     }
   }
+
+  return undefined
 }
 
 export function validateResponse(

@@ -1,6 +1,6 @@
 import { randomUUID } from 'crypto'
 
-export async function writeToDataStore(payload: unknown) {
+export async function writeToDataStore(/* payload: unknown */) {
   // write to database
   // ...
 

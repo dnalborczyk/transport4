@@ -1,4 +1,4 @@
-export async function updateDataStore(id: string, payload: unknown) {
+export async function updateDataStore(id: string /* , payload: unknown */) {
   // write to database
   // ...
 

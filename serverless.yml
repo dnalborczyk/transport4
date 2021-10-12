@@ -6,7 +6,7 @@ package:
 plugins:
   # - serverless-plugin-typescript
   # - serverless-webpack
-  - ${file(./serverless.plugin.js):usePlugin}
+  - ${file(./serverless.plugin.js):usePlugin} # TODO only allows js files, file issue for .cjs
   - serverless-offline
 
 # https://www.serverless.com/framework/docs/deprecations/#new-variables-resolver
@@ -29,3 +29,7 @@ functions:
   - ${file(./functions/getTacoSauces/serverless.yml)}
   - ${file(./functions/postTacoRecipeCard/serverless.yml)}
   - ${file(./functions/updateTacoRecipe/serverless.yml)}
+
+custom:
+  webpack:
+    webpackConfig: webpack.config.cjs # file issue, .cjs should work automatically!

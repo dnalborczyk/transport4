@@ -1,7 +1,6 @@
 import type {
   APIGatewayProxyEventV2,
   APIGatewayProxyResultV2,
-  Context,
 } from 'aws-lambda'
 import { createTacoRecipeCard } from './datastore'
 
@@ -27,7 +26,6 @@ const { parse } = JSON
 
 export default async function postTacoRecipeCard(
   event: APIGatewayProxyEventV2,
-  context: Context,
 ): Promise<APIGatewayProxyResultV2> {
   return createTacoRecipeCard(event.body ? parse(event.body) : null)
 }
