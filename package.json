@@ -6,6 +6,8 @@
   "scripts": {
     "build": "npm run build:types",
     "build:types": "./.scripts/generateOpenApiTypes.sh",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "start": "npm run start:typescript",
     "start:typescript": "serverless offline",
     "start:webpack": "NODE_ENV=production serverless offline",

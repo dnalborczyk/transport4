@@ -1,6 +1,6 @@
 .build
-.webpack
 .serverless
+.webpack
 
 node_modules
 
