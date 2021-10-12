@@ -1,0 +1,8 @@
+deleteTacoRecipe:
+  # description: ...
+  events:
+    - httpApi:
+        method: DELETE
+        path: /recipe/taco/{id}
+  handler: functions/deleteTacoRecipe/src/index.default
+  # name: ${sls:stage}-lambdaName

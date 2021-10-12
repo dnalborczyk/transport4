@@ -1,0 +1,8 @@
+getTacoRecipes:
+  # description: ...
+  events:
+    - httpApi:
+        method: GET
+        path: /recipe/taco
+  handler: functions/getTacoRecipes/src/index.default
+  # name: ${sls:stage}-lambdaName

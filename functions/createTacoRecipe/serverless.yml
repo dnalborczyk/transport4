@@ -1,0 +1,8 @@
+createTacoRecipe:
+  # description: ...
+  events:
+    - httpApi:
+        method: POST
+        path: /recipe/taco
+  handler: functions/createTacoRecipe/src/index.default
+  # name: ${sls:stage}-lambdaName

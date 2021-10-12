@@ -1,0 +1,8 @@
+updateTacoRecipe:
+  # description: ...
+  events:
+    - httpApi:
+        method: PUT
+        path: /recipe/taco/{id}
+  handler: functions/updateTacoRecipe/src/index.default
+  # name: ${sls:stage}-lambdaName

@@ -1,0 +1,1 @@
+npx openapi-typescript ./functions/createTacoRecipe/schema/schema.json --immutable-types --version 3.0.0 --output ./functions/createTacoRecipe/schema/schema.types.ts

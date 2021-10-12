@@ -1,0 +1,97 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/recipe/taco": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "description": {
+                    "maxLength": 50,
+                    "minLength": 5,
+                    "type": "string"
+                  },
+                  "ingredients": {
+                    "type": "object",
+                    "properties": {
+                      "proteins": {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "sauces": {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "shell": {
+                        "type": "string"
+                      },
+                      "toppings": {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "required": ["proteins", "shell", "toppings"]
+                  },
+                  "instructions": {
+                    "maxLength": 1000,
+                    "minLength": 5,
+                    "type": "string"
+                  },
+                  "name": {
+                    "maxLength": 20,
+                    "minLength": 5,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "description",
+                  "ingredients",
+                  "instructions",
+                  "name"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "maxLength": 50,
+                      "minLength": 5,
+                      "type": "string"
+                    }
+                  },
+                  "required": ["id", "message"],
+                  "type": "object"
+                }
+              }
+            },
+            "required": true
+          }
+        }
+      }
+    }
+  }
+}

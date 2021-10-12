@@ -1,0 +1,28 @@
+service: tacoRecipeService
+
+package:
+  individually: true
+
+plugins:
+  - serverless-plugin-typescript
+  # - serverless-webpack
+  - serverless-offline
+
+useDotenv: true
+
+provider:
+  # apiGateway:
+  #   binaryMediaTypes:
+  #     - '*/*'
+  lambdaHashingVersion: 20201221
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 512
+
+functions:
+  - ${file(./functions/createTacoRecipe/serverless.yml)}
+  - ${file(./functions/deleteTacoRecipe/serverless.yml)}
+  - ${file(./functions/getTacoRecipes/serverless.yml)}
+  - ${file(./functions/getTacoSauces/serverless.yml)}
+  - ${file(./functions/postTacoRecipeCard/serverless.yml)}
+  - ${file(./functions/updateTacoRecipe/serverless.yml)}

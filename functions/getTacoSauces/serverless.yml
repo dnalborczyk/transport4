@@ -1,0 +1,11 @@
+getTacoSauces:
+  # description: ...
+  environment:
+    API_KEY: 3c96dbdcf8a645fd830ad715ffc77da2
+    RECIPE_BASE_URL: https://api.spoonacular.com
+  events:
+    - httpApi:
+        method: GET
+        path: /recipe/taco/sauces
+  handler: functions/getTacoSauces/src/index.default
+  # name: ${sls:stage}-lambdaName
