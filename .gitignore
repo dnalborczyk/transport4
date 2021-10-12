@@ -2,3 +2,5 @@
 .webpack
 .serverless
 node_modules
+
+schema.types.ts

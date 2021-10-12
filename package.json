@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:types",
+    "build:types": "./.scripts/generateOpenApiTypes.sh",
     "start": "npm run start:typescript",
     "start:typescript": "serverless offline",
     "start:webpack": "NODE_ENV=production serverless offline",
