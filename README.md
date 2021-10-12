@@ -1,5 +1,8 @@
 # transport4
 
+> **_NOTE_:**
+> make sure to use **npm v7** or **v8**, as npm v6 does not install peer dependencies automatically and might cause issues.
+
 install deps
 
 ```shell
