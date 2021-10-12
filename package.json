@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "serverless offline",
+    "start": "npm run start:typescript",
+    "start:typescript": "serverless offline",
+    "start:webpack": "NODE_ENV=production serverless offline",
     "typecheck": "tsc --noEmit",
-    "deploy": "serverless deploy",
+    "deploy": "NODE_ENV=production serverless deploy",
     "remove": "serverless remove",
     "test": "jest"
   },

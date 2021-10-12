@@ -4,14 +4,19 @@ package:
   individually: true
 
 plugins:
-  - serverless-plugin-typescript
+  # - serverless-plugin-typescript
   # - serverless-webpack
+  - ${file(./serverless.plugin.js):usePlugin}
   - serverless-offline
+
+# https://www.serverless.com/framework/docs/deprecations/#new-variables-resolver
+variablesResolutionMode: 20210326
 
 provider:
   # apiGateway:
   #   binaryMediaTypes:
   #     - '*/*'
+  # https://www.serverless.com/framework/docs/deprecations/#default-providerlambdahashingversion
   lambdaHashingVersion: 20201221
   name: aws
   runtime: nodejs14.x
