@@ -6,7 +6,7 @@ import type {
 import { writeToDataStore } from './datastore'
 import { validateRequest, validateResponse } from './validate'
 
-const { parse } = JSON
+// const { parse } = JSON
 
 export default async function postTacoRecipeCard(
   event: APIGatewayProxyEventV2,
@@ -18,9 +18,8 @@ export default async function postTacoRecipeCard(
     return requestErrors
   }
 
-  const responseBody = await writeToDataStore(
-    event.body ? parse(event.body) : null,
-  )
+  const responseBody = await writeToDataStore()
+  // event.body ? parse(event.body) : null,
 
   return validateResponse(responseBody)
 }
